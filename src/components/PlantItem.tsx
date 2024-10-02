@@ -6,9 +6,17 @@ function handleClick(plantName: string) {
   alert(`Vous voulez acheter 1 ${plantName}? Très bon choix 🌱✨`);
 }
 
-export default function PlantItem({ name, cover, id, light, water }: Plant) {
+export default function PlantItem({
+  name,
+  cover,
+  id,
+  light,
+  water,
+  price,
+}: Plant) {
   return (
     <li className="lmj-plant-item" key={id}>
+      <span className="lmj-plant-item-price">{price}€</span>
       <img
         className="lmj-plant-item-cover"
         src={cover}
